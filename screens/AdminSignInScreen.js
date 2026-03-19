@@ -5,7 +5,7 @@ export default function AdminSignIn({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Dummy admin data
+ //ADMIN DUMMY DATA
   const dummyAdmins = [
     { email: 'admin@richfield.ac.za', password: 'admin123', username: 'Denilla' }
   ];
