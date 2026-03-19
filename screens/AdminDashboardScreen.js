@@ -4,19 +4,12 @@ import { signOut } from 'firebase/auth';
 import { auth } from './config/firebaseConfig';
 
 export default function AdminDashboardScreen({ route, navigation }) {
-  const routeUsername = route.params?.username; // get username from AdminSignIn
+  const routeUsername = route.params?.username; 
   const adminName = routeUsername || 'Admin';
 
   const handleLogout = () => {
-    navigation.replace('HomeScreen'); // For dummy, we skip Firebase logout
-    // If using Firebase auth, uncomment below:
-    /*
-    signOut(auth).then(() => {
-      navigation.replace('HomeScreen');
-    }).catch((error) => {
-      console.log('Logout error:', error.message);
-    });
-    */
+    navigation.replace('HomeScreen');
+   
   };
 
   return (
