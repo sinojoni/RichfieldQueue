@@ -17,7 +17,7 @@ export default function StudentSignUpScreen({ navigation }) {
 
     const cleanedEmail = email.toLowerCase().trim();
 
-    // ✅ Allow both @my.richfield.ac.za and @richfield.ac.za
+   
     if (
       !cleanedEmail.endsWith('@my.richfield.ac.za')
     ) {
@@ -34,7 +34,7 @@ export default function StudentSignUpScreen({ navigation }) {
       const userCredential = await createUserWithEmailAndPassword(auth, cleanedEmail, password);
       const user = userCredential.user;
 
-      // ✅ Ensure Firestore write succeeds
+     
       await setDoc(doc(db, "users", user.uid), {
         username: username,
         email: cleanedEmail,
@@ -109,7 +109,7 @@ export default function StudentSignUpScreen({ navigation }) {
   );
 }
 
-// Keep your styling exactly the same
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
