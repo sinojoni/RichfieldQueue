@@ -27,12 +27,12 @@ export default function StudentSignInScreen({ navigation }) {
     setLoading(true);
 
     try {
-      // ✅ Sign in
+     //STUDENT SIGN-IN
       const userCredential = await signInWithEmailAndPassword(auth, cleanedEmail, password);
       const user = userCredential.user;
       console.log("Signed in user:", user.uid, user.email); // Debug
 
-      // ✅ Get Firestore doc
+     //FETCHING DOCS FROM FIREBASE
       const userDocRef = doc(db, "users", user.uid);
       const userDoc = await getDoc(userDocRef);
 
@@ -105,7 +105,7 @@ export default function StudentSignInScreen({ navigation }) {
   );
 }
 
-// Keep your styling unchanged
+
 const styles = StyleSheet.create({
   container: { backgroundColor: 'white', flex: 1, justifyContent: 'center', alignItems: 'center', paddingBottom: '100%' },
   logo: { width: 80, height: 80, marginTop: '50%', marginRight: 250, borderRadius: 15 },
